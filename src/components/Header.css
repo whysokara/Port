@@ -1,0 +1,122 @@
+.hero-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    /* Reduced top padding from 8rem to 5rem */
+    /* Reduced bottom padding from 6rem to 3rem */
+    padding: 5rem 1rem 3rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-name {
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    background: linear-gradient(to bottom, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    /* Reduced */
+    text-align: center;
+}
+
+.hero-title {
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    /* Reduced from 3rem */
+    opacity: 0.8;
+    text-align: center;
+}
+
+.hero-title .highlight {
+    color: #fff;
+    opacity: 1;
+}
+
+.hero-bio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    /* Reduced from 3rem */
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 2rem;
+}
+
+.hero-paragraph {
+    font-size: 1.1rem;
+    color: #bbb;
+    line-height: 1.7;
+    max-width: 680px;
+}
+
+.hero-paragraph strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+.mandatory-phrase {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.3);
+    text-underline-offset: 4px;
+}
+
+.hero-socials {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+    /* Reduced */
+}
+
+.hero-link {
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    padding: 0.75rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-link:hover {
+    color: #000;
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 3.5rem;
+    }
+
+    .hero-header {
+        text-align: left;
+        align-items: flex-start;
+        padding-top: 4rem;
+        /* Even tighter on mobile */
+    }
+
+    .hero-name,
+    .hero-title,
+    .hero-socials {
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .hero-bio-container {
+        padding-left: 1rem;
+        border-left-width: 1px;
+    }
+}

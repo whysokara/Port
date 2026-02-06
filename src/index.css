@@ -1,0 +1,92 @@
+:root {
+  /* Ultra Dark / Technical Theme */
+  --bg-color: #030303;
+  --text-primary: #ffffff;
+  --text-secondary: #888888;
+
+  --card-bg: #0a0a0a;
+  --card-border: #1f1f1f;
+
+  --accent: #ffffff;
+  --border-radius: 16px;
+  --gap: 16px;
+
+  --font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 
+  Static Technical Dot Grid Overlay 
+  (Shooting Stars handle the motion in separate component)
+*/
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Simple clean dot grid */
+  background-image: radial-gradient(#333 1px, transparent 1px);
+  background-size: 32px 32px;
+
+  opacity: 0.15;
+  z-index: -2;
+  pointer-events: none;
+
+  /* Center vignette to fade edges */
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+#root {
+  min-height: 100%;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 10;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 2rem 1rem;
+  }
+}

@@ -1,0 +1,154 @@
+.bento-card {
+    position: relative;
+    width: 100%;
+    /* No backgrounds or borders - Text Only */
+}
+
+/* Header Group: Icon + Title/Subtitle */
+.card-header-group {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    position: relative;
+    cursor: pointer;
+    /* Interaction hint */
+}
+
+.card-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    margin-top: 4px;
+    /* Optical alignment with text cap-height */
+}
+
+.card-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.card-subtitle {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+}
+
+/* Hover States for Title */
+.card-header-group:hover .card-title {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.card-header-group:hover .card-icon-wrapper {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+
+/* Description - Hidden/Subtle by default? 
+   User asked for "Reveal on Hover" previously. 
+   Let's check if we want that behavior persistent or just visual style.
+*/
+/* 
+   REVEAL MECHANISM: GRID ANIMATION 
+   This ensures the duration (1.7s) is actually respected regarding the ease, 
+   instead of the max-height hack which can be choppy if max-height is too large.
+*/
+
+/* Wrapper for the revealable content */
+.card-reveal-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-internal-layout {
+    overflow: hidden;
+}
+
+/* On Hover/Active */
+/* Hover either the header OR the reveal wrapper itself to keep it open */
+.card-header-group:hover~.card-reveal-wrapper,
+.card-reveal-wrapper:hover {
+    grid-template-rows: 1fr;
+}
+
+/* Reset the old opacity/transform styles to apply to the inner layout instead */
+.card-description,
+.card-links {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    margin-bottom: 0;
+    /* Handled by grid spacing */
+}
+
+/* When wrapper opens, fade in content */
+.card-header-group:hover~.card-reveal-wrapper .card-description,
+.card-header-group:hover~.card-reveal-wrapper .card-links,
+.card-reveal-wrapper:hover .card-description,
+.card-reveal-wrapper:hover .card-links {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-links {
+    margin-top: 1.5rem;
+    /* Add spacing back here */
+}
+
+
+.mini-link {
+    font-size: 0.85rem;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 2px;
+    transition: all 0.2s ease;
+}
+
+.mini-link:hover {
+    border-color: #fff;
+    opacity: 0.8;
+}
+
+/* MOBILE TYPOGRAPHY TWEAKS */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.25rem;
+        /* Significanly smaller */
+    }
+
+    .card-subtitle {
+        font-size: 0.75rem;
+    }
+
+    .card-description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    /* Make reveal easier on mobile? 
+       Maybe just show description always on mobile? 
+       Or keep the tap behavior.
+       Let's keep hover/tap for minimal look, but ensure it works.
+    */
+    .card-header-group {
+        gap: 0.5rem;
+    }
+}

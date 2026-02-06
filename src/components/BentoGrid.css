@@ -1,0 +1,308 @@
+.bento-grid {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 8rem;
+}
+
+/* === TIMELINE TRACK === */
+.timeline-track {
+    position: absolute;
+    left: 50%;
+    /* Always center, even on mobile */
+    top: 0;
+    bottom: 0px;
+    width: 2px;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-line-static {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-line-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.5) 20%,
+            #ffffff 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    will-change: height;
+}
+
+.beam-tip {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow:
+        0 0 10px #fff,
+        0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* === END CAP (THE PORT) === */
+.timeline-end-cap {
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    background: #000;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 0 0 4px var(--bg-color);
+    z-index: 10;
+}
+
+.timeline-end-cap.active {
+    background: #fff;
+    box-shadow:
+        0 0 0 4px var(--bg-color),
+        0 0 20px #fff,
+        0 0 40px rgba(255, 255, 255, 0.8);
+    border-color: #fff;
+    transform: translateX(-50%) scale(1.5);
+}
+
+/* === ITEMS === */
+.timeline-item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 6rem;
+    width: 100%;
+}
+
+.timeline-content {
+    width: 45%;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    top: 24px;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+/* Socials / Footer */
+.timeline-item.socials {
+    margin-bottom: 0;
+    justify-content: center;
+    position: relative;
+    padding-top: 4rem;
+}
+
+.timeline-item.socials .timeline-content {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timeline-item.socials .timeline-marker {
+    display: none;
+}
+
+/* "System Online" Status Text */
+.system-status {
+    font-family: monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.8s ease;
+}
+
+.system-status.visible {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Alternating Layout - BASE STYLES apply to both now */
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: auto;
+    text-align: right;
+    padding-right: 3rem;
+}
+
+.timeline-item:nth-child(odd) .card-header-group {
+    flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(odd) .card-description,
+.timeline-item:nth-child(odd) .card-links {
+    padding-left: 0;
+    padding-right: 3.5rem;
+    /* Matches card-header-group padding roughly */
+}
+
+.timeline-item:nth-child(odd) .mini-link {
+    margin-left: auto;
+}
+
+.timeline-item:nth-child(odd) .card-links {
+    justify-content: flex-end;
+}
+
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    text-align: left;
+    padding-left: 3rem;
+}
+
+/* Mobile Responsiveness - KEEPING THE CENTER LAYOUT */
+@media (max-width: 768px) {
+
+    /* Tighten the gaps */
+    .timeline-content {
+        width: 45%;
+        /* Increased from 42% to give more text space */
+    }
+
+    /* Odd Items (Left) */
+    .timeline-item:nth-child(odd) .timeline-content {
+        padding-right: 1rem;
+        /* Reduced from 1.5rem */
+    }
+
+    .timeline-item:nth-child(odd) .card-description,
+    .timeline-item:nth-child(odd) .card-links {
+        padding-right: 0;
+        /* Remove extra text indent on mobile to maximize space */
+    }
+
+    /* Even Items (Right) */
+    .timeline-item:nth-child(even) .timeline-content {
+        padding-left: 1rem;
+        /* Reduced from 1.5rem */
+    }
+
+    /* Remove any extra internal indent if it exists in BentoCard? 
+     No, handled by text-align mostly.
+  */
+
+    .timeline-marker {
+        width: 8px;
+        /* Smaller dots */
+        height: 8px;
+        top: 20px;
+        /* Adjust vertical align with smaller text */
+    }
+
+    .timeline-item {
+        margin-bottom: 4rem;
+        /* Tighter vertical spacing */
+        flex-direction: row;
+        /* FORCE row again */
+        align-items: flex-start;
+        padding-left: 0;
+        /*  Reset the override */
+    }
+
+    .timeline-end-cap {
+        left: 50%;
+        /* Ensure cap stays centered */
+    }
+
+    /* Socials still centered */
+    .timeline-item.socials .timeline-content {
+        width: 100%;
+    }
+}
+
+/* GITHUB GRAPH */
+/* GITHUB GRAPH */
+.github-graph-container {
+    width: 100%;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    /* MODERN STYLING & MASKING */
+    background: var(--bg-color);
+    /* Masks the timeline behind it */
+    z-index: 5;
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.05);
+    /* Subtle green glow */
+}
+
+.github-graph-container:hover {
+    opacity: 1;
+    box-shadow: 0 0 40px rgba(0, 255, 0, 0.1);
+    transform: translateY(-2px);
+    border-color: #333;
+}
+
+.github-graph {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    /* Dark Mode Hack: Invert colors (Black text->White), then rotate hue to restore Green tiles */
+    filter: invert(1) hue-rotate(180deg);
+    border-radius: 8px;
+    /* Smooth corners on the image itself */
+}
+
+.graph-label {
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.2em;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .github-graph-container {
+        overflow-x: auto;
+        /* Allow horizontal scroll if needed */
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        /* For scrollbar */
+    }
+
+    .github-graph {
+        min-width: 600px;
+        /* Force minimum width to prevent crushing */
+    }
+}
