@@ -19,32 +19,32 @@ import {
 
 export const portfolioData = [
     {
-        id: 'ai',
-        type: 'medium',
-        year: '2024',
-        title: "Lorem Ipsum",
-        subtitle: "Dolor Sit Amet",
+        id: 'KPMG',
+        type: 'small',
+        year: '2026',
+        title: "Data Engineer",
+        subtitle: "Assistant Manager, KPMG",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
         icon: Cpu,
-        links: [{ label: "View Demos", url: "#" }]
+        links: [{ label: "", url: "#" }]
     },
     {
-        id: 'web3',
+        id: 'To-Do',
         type: 'small',
-        year: '2023',
-        title: "Consectetur Adipiscing",
-        subtitle: "Elit, Sed Do",
+        year: '2026',
+        title: "Your Digital Napkeen",
+        subtitle: "Vibe Code - Lovable",
         description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         icon: Database,
-        links: [{ label: "Contracts", url: "#" }]
+        links: [{ label: "SingleTxt", url: "http://singletxt.lovable.app" }]
     },
     {
-        id: 'mobile',
+        id: 'Leftover',
         type: 'small',
-        year: '2022',
-        title: "Eiusmod Tempor",
-        subtitle: "Incididunt Ut",
-        description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+        year: '2025',
+        title: "Leftover",
+        subtitle: "Swipe. Keep. Delete",
+        description: "Swipe-driven photo cleanup app for fast, intuitive gallery decluttering.",
         icon: Smartphone,
         links: []
     },

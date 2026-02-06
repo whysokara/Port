@@ -35,8 +35,9 @@ const BentoCard = ({ item }) => {
                     {links && links.length > 0 && (
                         <div className="card-links">
                             {links.map((link, idx) => (
-                                <a key={idx} href={link.url} className="mini-link">
+                                <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="mini-link">
                                     {link.label}
+                                    <ArrowUpRight size={14} style={{ opacity: 0.7 }} />
                                 </a>
                             ))}
                         </div>
