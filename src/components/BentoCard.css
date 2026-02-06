@@ -152,3 +152,41 @@
         gap: 0.5rem;
     }
 }
+
+/* SOCIAL STRIP STYLES */
+.bento-card.social-strip {
+    background: transparent;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    gap: 1.5rem;
+    margin-top: 2rem;
+    min-height: 80px;
+    /* Ensure space */
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.social-link:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+}

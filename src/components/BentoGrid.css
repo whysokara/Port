@@ -262,7 +262,7 @@
     position: relative;
     padding: 1.5rem;
     border-radius: 16px;
-    border: 1px solid #1a1a1a;
+    /* border: 1px solid #1a1a1a; REMOVED per user request */
     box-shadow: 0 0 30px rgba(0, 255, 0, 0.05);
     /* Subtle green glow */
 }
@@ -278,8 +278,11 @@
     width: 100%;
     height: auto;
     max-width: 800px;
-    /* Dark Mode Hack: Invert colors (Black text->White), then rotate hue to restore Green tiles */
-    filter: invert(1) hue-rotate(180deg);
+    /* Dark Mode Hack: Monochrome Grey/White Theme */
+    /* grayscale(1) removes color (Green becomes Grey) */
+    /* invert(1) turns Light Grey background to Dark Grey, and Dark Text to Light */
+    /* brightness(1.2) pops the active squares */
+    filter: grayscale(1) invert(1) brightness(1.2);
     border-radius: 8px;
     /* Smooth corners on the image itself */
 }

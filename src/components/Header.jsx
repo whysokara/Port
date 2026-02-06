@@ -13,12 +13,12 @@ const Header = () => {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="hero-content"
             >
-                <h1 className="hero-name">Kara</h1>
-                <h2 className="hero-title">Product Manager <span className="highlight">// Non-Standard</span></h2>
+                <h1 className="hero-name">kara</h1>
+                <h2 className="hero-title">Lorem Ipsum <span className="highlight">// Dolor Sit</span></h2>
 
                 <div className="hero-bio-container">
                     <p className="hero-paragraph">
-                        My path isn't a straight line. From pixels in Figma to pipelines in Python, I’ve switched roles to learn the language of every person in the room. I tried the standard PM playbooks, but I can't build by ticking boxes—I need to get my hands dirty. I am done wandering. Give me a problem worth solving, and <span className="mandatory-phrase">I will stay.</span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est <span className="mandatory-phrase">laborum.</span>
                     </p>
                 </div>
 
@@ -32,6 +32,18 @@ const Header = () => {
                     <a href="mailto:hello@example.com" className="hero-link">
                         <Mail size={20} />
                     </a>
+                </div>
+
+                <div className="hero-tech-stack">
+                    <span className="tech-label">STACK_</span>
+                    <div className="tech-icons">
+                        <img src="https://cdn.simpleicons.org/react/ffffff" alt="React" title="React" />
+                        <img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript" title="JavaScript" />
+                        <img src="https://cdn.simpleicons.org/python/ffffff" alt="Python" title="Python" />
+                        <img src="https://cdn.simpleicons.org/solidity/ffffff" alt="Solidity" title="Solidity" />
+                        <img src="https://cdn.simpleicons.org/figma/ffffff" alt="Figma" title="Figma" />
+                        <img src="https://cdn.simpleicons.org/git/ffffff" alt="Git" title="Git" />
+                    </div>
                 </div>
             </motion.div>
         </header>
