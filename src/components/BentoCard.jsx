@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import './BentoCard.css';
@@ -51,12 +52,20 @@ const BentoCard = ({ item }) => {
 
                     {links && links.length > 0 && (
                         <div className="card-links">
-                            {links.map((link, idx) => (
-                                <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="mini-link">
-                                    {link.label}
-                                    <ArrowUpRight size={14} style={{ opacity: 0.7 }} />
-                                </a>
-                            ))}
+                            {links.map((link, idx) => {
+                                const isInternal = link.url.startsWith('/');
+                                return isInternal ? (
+                                    <Link key={idx} to={link.url} className="mini-link">
+                                        {link.label}
+                                        <ArrowUpRight size={14} style={{ opacity: 0.7 }} />
+                                    </Link>
+                                ) : (
+                                    <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="mini-link">
+                                        {link.label}
+                                        <ArrowUpRight size={14} style={{ opacity: 0.7 }} />
+                                    </a>
+                                );
+                            })}
                         </div>
                     )}
                 </div>

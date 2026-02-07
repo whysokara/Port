@@ -1,12 +1,16 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin } from 'lucide-react';
+import { Mail, Linkedin, FileText } from 'lucide-react';
 import './Header.css';
 
 const Header = () => {
     return (
         <header className="hero-header">
+            <Link to="/writings" className="writings-nav-link">
+                Writings
+            </Link>
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -38,6 +42,9 @@ const Header = () => {
                     <a href="http://instagram.com/whysokara/" target="_blank" rel="noopener noreferrer" className="hero-link">
                         <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" width="20" height="20" style={{ opacity: 0.8 }} />
                     </a>
+                    <Link to="/writings" className="hero-link">
+                        <FileText size={20} style={{ opacity: 0.8 }} />
+                    </Link>
                 </div>
 
                 <div className="hero-tech-stack">

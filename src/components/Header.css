@@ -4,11 +4,33 @@
     align-items: center;
     justify-content: center;
     text-align: left;
+    position: relative;
     /* Reduced top padding from 8rem to 5rem */
     /* Reduced bottom padding from 6rem to 3rem */
     padding: var(--space-4xl) var(--space-md) var(--space-2xl) var(--space-md);
     max-width: 800px;
     margin: 0 auto;
+}
+
+.writings-nav-link {
+    position: absolute;
+    top: var(--space-xl);
+    right: var(--space-xl);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    transition: all var(--transition-fast);
+    padding: var(--space-xs) var(--space-md);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+}
+
+.writings-nav-link:hover {
+    color: var(--text-primary);
+    border-color: var(--border-normal);
+    background: var(--bg-overlay-medium);
 }
 
 .hero-name {
