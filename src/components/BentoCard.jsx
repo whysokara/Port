@@ -29,6 +29,9 @@ const BentoCard = ({ item }) => {
                             src={`https://api.microlink.io/?url=${encodeURIComponent(previewUrl)}&screenshot=true&meta=false&embed=screenshot.url`}
                             alt="Website Preview"
                             loading="lazy"
+                            onError={(e) => {
+                                e.target.parentElement.style.display = 'none';
+                            }}
                         />
                     </div>
                 )}

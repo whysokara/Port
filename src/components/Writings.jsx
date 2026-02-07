@@ -54,7 +54,7 @@ const Writings = () => {
                             <div className="article-content">
                                 <div className="article-content-inner">
                                     <div className="article-text">
-                                        {article.content.split('\n\n').map((paragraph, idx) => (
+                                        {article.content.split(/\n\s*\n/).map((paragraph, idx) => (
                                             <p key={idx}>{paragraph}</p>
                                         ))}
                                     </div>

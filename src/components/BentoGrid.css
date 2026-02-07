@@ -188,68 +188,6 @@
     padding-left: var(--space-2xl);
 }
 
-/* Mobile Responsiveness - KEEPING THE CENTER LAYOUT */
-@media (max-width: 768px) {
-
-    /* Tighten the gaps */
-    .timeline-content {
-        width: 45%;
-        /* Increased from 42% to give more text space */
-    }
-
-    /* Odd Items (Left) */
-    .timeline-item:nth-child(odd) .timeline-content {
-        padding-right: var(--space-md);
-        /* Reduced from 1.5rem */
-    }
-
-    .timeline-item:nth-child(odd) .card-description,
-    .timeline-item:nth-child(odd) .card-links,
-    .timeline-item:nth-child(odd) .card-tags {
-        padding-right: 0;
-        /* Remove extra text indent on mobile to maximize space */
-    }
-
-    /* Even Items (Right) */
-    .timeline-item:nth-child(even) .timeline-content {
-        padding-left: var(--space-md);
-        /* Reduced from 1.5rem */
-    }
-
-    /* Remove any extra internal indent if it exists in BentoCard? 
-     No, handled by text-align mostly.
-  */
-
-    .timeline-marker {
-        width: 8px;
-        /* Smaller dots */
-        height: 8px;
-        top: 20px;
-        /* Adjust vertical align with smaller text */
-    }
-
-    .timeline-item {
-        margin-bottom: var(--space-3xl);
-        /* Tighter vertical spacing */
-        flex-direction: row;
-        /* FORCE row again */
-        align-items: flex-start;
-        padding-left: 0;
-        /*  Reset the override */
-    }
-
-    .timeline-end-cap {
-        left: 50%;
-        /* Ensure cap stays centered */
-    }
-
-    /* Socials still centered */
-    .timeline-item.socials .timeline-content {
-        width: 100%;
-    }
-}
-
-/* GITHUB GRAPH */
 /* GITHUB GRAPH */
 .github-graph-container {
     width: 100%;
@@ -301,18 +239,89 @@
     margin-top: var(--space-sm);
 }
 
+/* === MOBILE RESPONSIBILITY === */
 @media (max-width: 768px) {
     .github-graph-container {
         overflow-x: auto;
-        /* Allow horizontal scroll if needed */
         margin-bottom: var(--space-md);
         padding-bottom: var(--space-md);
-        /* For scrollbar */
     }
 
     .github-graph {
         max-width: 100%;
         width: 100%;
-        /* Ensure graph scales to container width on mobile */
+    }
+
+    /* === MOBILE: LEFT ALIGNED TIMELINE === */
+    .timeline-track,
+    .timeline-end-cap {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-marker {
+        left: 20px;
+        top: 24px;
+        width: 10px;
+        height: 10px;
+    }
+
+    /* FORCE RESET ALL ITEMS TO LEFT COLUMN */
+    .timeline-item {
+        margin-bottom: var(--space-3xl);
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 0 !important;
+    }
+
+    .timeline-content {
+        width: calc(100% - 50px) !important;
+        margin-left: 50px !important;
+        margin-right: 0 !important;
+        text-align: left !important;
+        padding: 0 !important;
+    }
+
+    /* SPECIFIC ODD/EVEN OVERRIDES (Crucial) */
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 50px) !important;
+        margin-left: 50px !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+
+    /* Reset Header Direction for Odd items */
+    .timeline-item:nth-child(odd) .card-header-group {
+        flex-direction: row !important;
+    }
+
+    /* Reset internal padding for Odd items */
+    .timeline-item:nth-child(odd) .card-description,
+    .timeline-item:nth-child(odd) .card-links,
+    .timeline-item:nth-child(odd) .card-tags {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Reset odd links/tags alignment */
+    .timeline-item:nth-child(odd) .card-links,
+    .timeline-item:nth-child(odd) .card-tags {
+        justify-content: flex-start !important;
+    }
+
+    .timeline-item:nth-child(odd) .mini-link {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        /* was margin-left: auto */
+    }
+
+    /* Socials */
+    .timeline-item.socials .timeline-content {
+        width: 100% !important;
+        margin-left: 0 !important;
+        align-items: center !important;
+        padding-top: var(--space-xl) !important;
     }
 }
