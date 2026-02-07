@@ -181,15 +181,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    /* Glass Effect */
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 48px;
+    height: 48px;
+    /* Removed background/border for transparent look */
+    background: transparent;
+    border: none;
     color: var(--text-secondary);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
+    opacity: 0.7;
 }
 
 .social-link:hover {

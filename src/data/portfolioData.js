@@ -12,6 +12,41 @@ import {
     Linkedin,
     Mail
 } from 'lucide-react';
+import React from 'react';
+
+/* 
+   SIMPLE ICON WRAPPER 
+   Uses simpleicons.org for brand logos (X, Instagram, etc) 
+   Colors: White (ffffff)
+*/
+const SimpleIcon = ({ slug, size = 24 }) =>
+    React.createElement('img', {
+        src: `https://cdn.simpleicons.org/${slug}/ffffff`,
+        alt: slug,
+        width: size,
+        height: size,
+        style: { opacity: 0.8, transition: 'opacity 0.2s' }
+    });
+
+/* 
+   ICON MAPPING
+   Maps string names (from Google Sheet) to React Components.
+*/
+export const iconMap = {
+    'Code2': Code2,
+    'Palette': Palette,
+    'Terminal': Terminal,
+    'Database': Database,
+    'Cpu': Cpu,
+    'Layout': Layout,
+    'Smartphone': Smartphone,
+    'TrendingUp': TrendingUp,
+    'Github': ({ size }) => React.createElement(SimpleIcon, { slug: 'github', size }),
+    'Linkedin': ({ size }) => React.createElement(SimpleIcon, { slug: 'linkedin', size }),
+    'Twitter': ({ size }) => React.createElement(SimpleIcon, { slug: 'x', size }), // X Logo
+    'Instagram': ({ size }) => React.createElement(SimpleIcon, { slug: 'instagram', size }),
+    'Mail': Mail // Keep Lucide for generic mail
+};
 
 /* 
    LOREM IPSUM VERSION
@@ -46,7 +81,7 @@ export const portfolioData = [
         subtitle: "Swipe. Keep. Delete",
         description: "Swipe-driven photo cleanup app for fast, intuitive gallery decluttering.",
         icon: Smartphone,
-        links: []
+        links: ["X-code", "Claude"]
     },
     {
         id: 'nocode',
@@ -81,15 +116,15 @@ export const portfolioData = [
         links: []
     },
     {
-        id: 'design',
-        type: 'medium',
+        id: 'WhatsApp',
+        type: 'small',
         year: '2019',
-        title: "Quis Autem Vel",
-        subtitle: "Eum Iure",
+        title: "WhatsApp API",
+        subtitle: "No more saving temporary WhatsApp contacts",
         description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
         icon: Palette,
         links: [
-            { label: "Behance", url: "#" }
+            { label: "WhatsApp Plugin", url: "https://whytoadd.netlify.app" }
         ]
     },
     {
@@ -101,9 +136,11 @@ export const portfolioData = [
         description: "System Online.",
         icon: Terminal,
         links: [
-            { label: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },
-            { label: "GitHub", url: "https://github.com", icon: Github },
-            { label: "Email", url: "mailto:hello@example.com", icon: Mail }
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/karahimanshu/", icon: iconMap.Linkedin },
+            { label: "GitHub", url: "http://github.com/whysokara", icon: iconMap.Github },
+            { label: "X", url: "http://x.com/whysokara", icon: iconMap.Twitter },
+            { label: "Instagram", url: "http://instagram.com/whysokara/", icon: iconMap.Instagram },
+            { label: "Email", url: "mailto:kara_himanshu@yahoo.com", icon: iconMap.Mail }
         ]
     }
 ];

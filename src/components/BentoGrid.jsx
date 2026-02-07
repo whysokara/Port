@@ -94,7 +94,7 @@ const BentoGrid = ({ data }) => {
                         key={footerItem.id}
                         className={`timeline-item socials ${isFinished ? 'powered-on' : ''}`}
                         variants={itemVariants}
-                        style={{ marginTop: '4rem' }} // Add gap after the road ends
+                        style={{ marginTop: '4rem', paddingBottom: '2rem' }} // Add gap after the road ends
                     >
                         <div className="timeline-content">
                             <div className={`system-status ${isFinished ? 'visible' : ''}`}>
@@ -111,6 +111,18 @@ const BentoGrid = ({ data }) => {
                             </div>
 
                             <BentoCard item={footerItem} />
+
+                            {/* FIXED FOOTER TEXT */}
+                            <div className="footer-copyright" style={{
+                                textAlign: 'center',
+                                marginTop: '3rem',
+                                opacity: 0.4,
+                                fontSize: '0.75rem',
+                                letterSpacing: '0.1em',
+                                color: 'var(--text-secondary)'
+                            }}>
+                                Designed & Developed by kara © {new Date().getFullYear()}
+                            </div>
                         </div>
                     </motion.div>
                 )}
