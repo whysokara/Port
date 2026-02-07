@@ -1,7 +1,8 @@
 
 import {
     Terminal,
-    Mail
+    Mail,
+    Linkedin
 } from 'lucide-react';
 import React from 'react';
 
@@ -25,7 +26,7 @@ const SimpleIcon = ({ slug, size = 24 }) =>
 */
 export const iconMap = {
     'Github': ({ size }) => React.createElement(SimpleIcon, { slug: 'github', size }),
-    'Linkedin': ({ size }) => React.createElement(SimpleIcon, { slug: 'linkedin', size }),
+    'Linkedin': Linkedin, // Use Lucide icon (SimpleIcons removed LinkedIn)
     'Twitter': ({ size }) => React.createElement(SimpleIcon, { slug: 'x', size }), // X Logo
     'Instagram': ({ size }) => React.createElement(SimpleIcon, { slug: 'instagram', size }),
     'Mail': Mail // Keep Lucide for generic mail
@@ -115,11 +116,11 @@ export const portfolioData = [
         description: "System Online.",
         icon: Terminal,
         links: [
-            { label: "LinkedIn", url: "https://www.linkedin.com/in/karahimanshu/", icon: iconMap.Linkedin },
             { label: "GitHub", url: "http://github.com/whysokara", icon: iconMap.Github },
+            { label: "Email", url: "mailto:kara_himanshu@yahoo.com", icon: iconMap.Mail },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/karahimanshu/", icon: iconMap.Linkedin },
             { label: "X", url: "http://x.com/whysokara", icon: iconMap.Twitter },
-            { label: "Instagram", url: "http://instagram.com/whysokara/", icon: iconMap.Instagram },
-            { label: "Email", url: "mailto:kara_himanshu@yahoo.com", icon: iconMap.Mail }
+            { label: "Instagram", url: "http://instagram.com/whysokara/", icon: iconMap.Instagram }
         ]
     }
 ];

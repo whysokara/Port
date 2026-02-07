@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
 import './Header.css';
 
 const Header = () => {
@@ -26,17 +26,17 @@ const Header = () => {
                     <a href="http://github.com/whysokara" target="_blank" rel="noopener noreferrer" className="hero-link">
                         <img src="https://cdn.simpleicons.org/github/ffffff" alt="Github" width="20" height="20" style={{ opacity: 0.8 }} />
                     </a>
+                    <a href="mailto:kara_himanshu@yahoo.com" className="hero-link">
+                        <Mail size={20} style={{ opacity: 0.8 }} />
+                    </a>
                     <a href="https://www.linkedin.com/in/karahimanshu/" target="_blank" rel="noopener noreferrer" className="hero-link">
-                        <img src="https://cdn.simpleicons.org/linkedin/ffffff" alt="LinkedIn" width="20" height="20" style={{ opacity: 0.8 }} />
+                        <Linkedin size={20} style={{ opacity: 0.8 }} />
                     </a>
                     <a href="http://x.com/whysokara" target="_blank" rel="noopener noreferrer" className="hero-link">
                         <img src="https://cdn.simpleicons.org/x/ffffff" alt="X" width="20" height="20" style={{ opacity: 0.8 }} />
                     </a>
                     <a href="http://instagram.com/whysokara/" target="_blank" rel="noopener noreferrer" className="hero-link">
                         <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram" width="20" height="20" style={{ opacity: 0.8 }} />
-                    </a>
-                    <a href="mailto:kara_himanshu@yahoo.com" className="hero-link">
-                        <Mail size={20} style={{ opacity: 0.8 }} />
                     </a>
                 </div>
 
