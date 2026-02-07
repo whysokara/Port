@@ -204,7 +204,8 @@
     }
 
     .timeline-item:nth-child(odd) .card-description,
-    .timeline-item:nth-child(odd) .card-links {
+    .timeline-item:nth-child(odd) .card-links,
+    .timeline-item:nth-child(odd) .card-tags {
         padding-right: 0;
         /* Remove extra text indent on mobile to maximize space */
     }
