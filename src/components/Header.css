@@ -53,7 +53,7 @@
 }
 
 .hero-paragraph {
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     color: var(--color-gray-light);
     line-height: 1.7;
     max-width: 680px;
@@ -149,6 +149,7 @@
     display: flex;
     gap: var(--space-lg);
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .tech-icons img {
@@ -167,7 +168,18 @@
 
 @media (max-width: 768px) {
     .hero-tech-stack {
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: var(--space-xl);
+        flex-wrap: wrap;
+    }
+
+    .tech-icons {
+        gap: var(--space-md);
+        flex-wrap: wrap;
+    }
+
+    .tech-icons img {
+        width: 18px;
+        height: 18px;
     }
 }

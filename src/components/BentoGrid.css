@@ -311,7 +311,8 @@
     }
 
     .github-graph {
-        min-width: 600px;
-        /* Force minimum width to prevent crushing */
+        max-width: 100%;
+        width: 100%;
+        /* Ensure graph scales to container width on mobile */
     }
 }

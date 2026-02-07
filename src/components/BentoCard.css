@@ -207,11 +207,11 @@
         line-height: 1.5;
     }
 
-    /* Make reveal easier on mobile? 
-       Maybe just show description always on mobile? 
-       Or keep the tap behavior.
-       Let's keep hover/tap for minimal look, but ensure it works.
-    */
+    /* Hide preview tooltip on mobile to prevent overflow */
+    .preview-tooltip {
+        display: none;
+    }
+
     .card-header-group {
         gap: var(--space-sm);
     }

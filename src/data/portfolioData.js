@@ -121,7 +121,7 @@ export const portfolioData = [
         id: 'DRDO',
         type: 'small',
         year: '2018',
-        title: "Project Intern",
+        title: "DRDO Trainee",
         subtitle: "Center for Artificial Intelligence and Robotics, DRDO",
         description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
         tags: ["Arduino", "Manipulator Arm", "Robotics"]
