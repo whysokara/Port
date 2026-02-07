@@ -43,7 +43,7 @@ export const portfolioData = [
         year: '2026',
         title: "Data Engineer",
         subtitle: "Assistant Manager, KPMG",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+        description: "Building scalable data pipelines and analytics solutions using modern cloud infrastructure and big data technologies.",
         // links: [{ label: "", url: "#" }],
         tags: ["SQL", "PySpark", "Databricks", "AWS", "QlikSense"]
     },
@@ -53,7 +53,7 @@ export const portfolioData = [
         year: '2026',
         title: "Your Digital Napkeen",
         subtitle: "Vibe Code - Lovable",
-        description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+        description: "A minimalist productivity app for quick note-taking. Your thoughts, one text file, always accessible.",
         links: [{ label: "SingleTxt", url: "http://singletxt.lovable.app" }],
         tags: ["Lovable", "Antigravity", "React"],
         previewUrl: "http://singletxt.lovable.app"
@@ -84,7 +84,7 @@ export const portfolioData = [
         year: '2022',
         title: "Senior Analyst",
         subtitle: "Capgemini 2019-2022",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        description: "Led data analytics and visualization projects, delivering business intelligence solutions across multiple client engagements.",
         links: [
             { label: "Experience Letter", url: "https://drive.google.com/file/d/1dOusQrAbmNE1CW1cd0tqiJxxGqaO7iCq/view?usp=sharing" }
         ],
@@ -97,7 +97,7 @@ export const portfolioData = [
         year: '2020',
         title: "Digital Marketing",
         subtitle: "Intern, PixelTrack Digital",
-        description: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+        description: "Managed end-to-end digital campaigns including website hosting, payment gateway integration, and social media advertising.",
         links: [
             { label: "Certificate", url: "https://drive.google.com/file/d/1HM3mhewkepNuGzXoXbw2-HApDK2gXRMZ/view?usp=sharing" }
         ],
@@ -110,7 +110,7 @@ export const portfolioData = [
         year: '2019',
         title: "WhatsApp",
         subtitle: "No more saving temporary WhatsApp contacts",
-        description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        description: "A simple web tool to send WhatsApp messages without saving contacts. Built with React and WhatsApp API integration.",
         links: [
             { label: "WhatsApp Plugin", url: "https://whytoadd.netlify.app" }
         ],
@@ -123,7 +123,7 @@ export const portfolioData = [
         year: '2018',
         title: "DRDO Trainee",
         subtitle: "Center for Artificial Intelligence and Robotics, DRDO",
-        description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        description: "Worked on robotics and automation projects, developing Arduino-based control systems for manipulator arms.",
         tags: ["Arduino", "Manipulator Arm", "Robotics"]
         // links: [
         //     { label: "WhatsApp Plugin", url: "https://whytoadd.netlify.app" }
