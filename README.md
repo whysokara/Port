@@ -1,44 +1,52 @@
-# Minimal Bento Portfolio
+# Kara | Minimal Portfolio
 
-A modern, dark-themed bento grid portfolio built with React, Vite, and CSS. Designed for high impact and extensive customizability.
+A digital garden and personal portfolio, designed with minimalism, subtle interactions, and performance in mind. Built to showcase work and thoughts without distraction.
 
-## Features
-- **Dark Mode Aesthetic**: Deep black background, noise textures, and glassmorphism.
-- **Bento Grid Layout**: Responsive grid that adapts to Desktop (4 cols), Tablet (2 cols), and Mobile (1 col).
-- **Micro-Interactions**: Hover effects, smooth transitions, and link reveals.
-- **Data-Driven**: All content is managed in a single file (`src/data/portfolioData.js`).
+## Overview
+
+This project is a React-based single-page application (SPA) featuring a responsive bento-grid layout for the portfolio and a dedicated, distraction-free section for writings. The aesthetic is strictly dark mode, utilizing custom CSS variables for easy theming and Framer Motion for seamless micro-interactions.
+
+## Key Features
+
+- **Bento Grid Architecture**: A modular, responsive grid layout that adapts fluidly across desktop, tablet, and mobile breakpoints.
+- **Writings Section**: A dedicated route (`/writings`) featuring a minimal, accordion-style list for essays and notes. Focuses purely on typography and content.
+- **Micro-Interactions**: Subtle hover states, smooth page transitions, and reveal animations powered by Framer Motion.
+- **Performance First**: Built on Vite for lightning-fast HMR and optimized production builds.
+- **Data-Driven Content**: All portfolio items and writings are managed via simple data files in `src/data/`, making updates effortless.
+
+## Tech Stack
+
+- **React 18**
+- **Vite**
+- **Framer Motion**
+- **CSS Modules / Variables**
+- **React Router DOM**
+- **Lucide React Icons**
 
 ## Getting Started
 
-1.  **Install dependencies**
+1.  **Clone & Install**
     ```bash
+    git clone https://github.com/whysokara/port.git
+    cd port
     npm install
     ```
 
-2.  **Start the development server**
+2.  **Develop**
     ```bash
     npm run dev
     ```
 
-3.  **Build for production**
+3.  **Build**
     ```bash
     npm run build
     ```
 
-## Customization
+## Structure
 
-### Editing Content
-Go to `src/data/portfolioData.js`. You can update:
-- **Tiles**: Add, remove, or reorder the array items.
-- **Links**: Update URLs in the `links` array for each card.
-- **Icons**: Import new icons from `lucide-react`.
+- `src/components/`: Reusable UI components (BentoCard, Header, Writings, etc.)
+- `src/data/`: Content sources (`portfolioData.js`, `writings.js`)
+- `src/index.css`: Global styles, design tokens, and typography system.
 
-### Editing Styles
-- `src/index.css`: Global variables, colors, and the noise texture.
-- `src/components/BentoCard.css`: Card specific styles and hover animations.
-
-## Deployment
-This project is ready to deploy on **Vercel** or **Netlify**.
-1. Push this code to GitHub.
-2. Import the repo in Vercel/Netlify.
-3. It will automatically detect `Vite` and deploy.
+---
+Designed & Developed by Kara © 2026
