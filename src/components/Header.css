@@ -6,65 +6,66 @@
     text-align: left;
     /* Reduced top padding from 8rem to 5rem */
     /* Reduced bottom padding from 6rem to 3rem */
-    padding: 5rem 1rem 3rem 1rem;
+    padding: var(--space-4xl) var(--space-md) var(--space-2xl) var(--space-md);
     max-width: 800px;
     margin: 0 auto;
 }
 
 .hero-name {
-    font-size: 5rem;
+    font-size: var(--text-4xl);
     font-weight: 600;
     letter-spacing: -0.04em;
     line-height: 1;
-    background: linear-gradient(to bottom, #fff, #888);
+    background: linear-gradient(to bottom, var(--color-white), var(--color-gray-mid));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
     /* Reduced */
     text-align: center;
 }
 
 .hero-title {
-    font-family: monospace;
-    font-size: 1rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-base);
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-xl);
     /* Reduced from 3rem */
-    opacity: 0.8;
+    opacity: var(--opacity-very-high);
     text-align: center;
 }
 
 .hero-title .highlight {
-    color: #fff;
+    color: var(--color-white);
     opacity: 1;
 }
 
 .hero-bio-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
     /* Reduced from 3rem */
     border-left: 2px solid rgba(255, 255, 255, 0.1);
-    padding-left: 2rem;
+    padding-left: var(--space-xl);
 }
 
 .hero-paragraph {
-    font-size: 1.1rem;
-    color: #bbb;
+    font-size: var(--text-lg);
+    color: var(--color-gray-light);
     line-height: 1.7;
     max-width: 680px;
 }
 
 .hero-paragraph strong {
-    color: #fff;
+    color: var(--color-white);
     font-weight: 500;
 }
 
 .mandatory-phrase {
-    color: #fff;
+    color: var(--color-white);
     font-weight: 600;
     text-decoration: underline;
     text-decoration-color: rgba(255, 255, 255, 0.3);
@@ -73,26 +74,26 @@
 
 .hero-socials {
     display: flex;
-    gap: 1.5rem;
+    gap: var(--space-lg);
     justify-content: center;
-    margin-top: 0.5rem;
+    margin-top: var(--space-sm);
     /* Reduced */
 }
 
 .hero-link {
     color: var(--text-secondary);
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
     /* Removed padding/background for transparent look */
     padding: 0;
     background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.7;
+    opacity: var(--opacity-high);
 }
 
 .hero-link:hover {
-    color: #fff;
+    color: var(--color-white);
     background: transparent;
     transform: translateY(-2px);
     opacity: 1;
@@ -100,13 +101,13 @@
 
 @media (max-width: 768px) {
     .hero-name {
-        font-size: 3.5rem;
+        font-size: var(--text-3xl);
     }
 
     .hero-header {
         text-align: left;
         align-items: flex-start;
-        padding-top: 4rem;
+        padding-top: var(--space-3xl);
         /* Even tighter on mobile */
     }
 
@@ -118,19 +119,19 @@
     }
 
     .hero-bio-container {
-        padding-left: 1rem;
+        padding-left: var(--space-md);
         border-left-width: 1px;
     }
 }
 
 /* Tech Stack */
 .hero-tech-stack {
-    margin-top: 3rem;
+    margin-top: var(--space-2xl);
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-md);
     opacity: 0.5;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-normal);
 }
 
 .hero-tech-stack:hover {
@@ -138,15 +139,15 @@
 }
 
 .tech-label {
-    font-family: monospace;
-    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
     color: var(--text-secondary);
     letter-spacing: 0.1em;
 }
 
 .tech-icons {
     display: flex;
-    gap: 1.25rem;
+    gap: var(--space-lg);
     align-items: center;
 }
 
@@ -154,7 +155,7 @@
     width: 20px;
     height: 20px;
     opacity: 0.7;
-    transition: all 0.3s ease;
+    transition: all var(--transition-normal);
     filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
 }
 
@@ -167,6 +168,6 @@
 @media (max-width: 768px) {
     .hero-tech-stack {
         justify-content: center;
-        margin-top: 2rem;
+        margin-top: var(--space-xl);
     }
 }

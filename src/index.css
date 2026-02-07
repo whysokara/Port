@@ -1,17 +1,86 @@
 :root {
-  /* Ultra Dark / Technical Theme */
+  /* === BASE COLORS === */
   --bg-color: #030303;
   --text-primary: #ffffff;
   --text-secondary: #888888;
-
   --card-bg: #0a0a0a;
   --card-border: #1f1f1f;
-
   --accent: #ffffff;
-  --border-radius: 16px;
-  --gap: 16px;
 
+  /* === COLOR PALETTE === */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-dark: #333333;
+  --color-gray-mid: #888888;
+  --color-gray-light: #bbbbbb;
+
+  /* === OPACITY LEVELS === */
+  --opacity-subtle: 0.05;
+  --opacity-low: 0.1;
+  --opacity-medium: 0.2;
+  --opacity-high: 0.7;
+  --opacity-very-high: 0.8;
+  --opacity-full: 1;
+
+  /* === SEMANTIC COLORS === */
+  --bg-overlay: rgba(255, 255, 255, 0.05);
+  --bg-overlay-medium: rgba(255, 255, 255, 0.03);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-normal: rgba(255, 255, 255, 0.2);
+
+  /* === SPACING SCALE === */
+  --space-xs: 0.25rem;
+  /* 4px */
+  --space-sm: 0.5rem;
+  /* 8px */
+  --space-md: 1rem;
+  /* 16px */
+  --space-lg: 1.5rem;
+  /* 24px */
+  --space-xl: 2rem;
+  /* 32px */
+  --space-2xl: 3rem;
+  /* 48px */
+  --space-3xl: 4rem;
+  /* 64px */
+  --space-4xl: 6rem;
+  /* 96px */
+
+  /* === TYPOGRAPHY === */
   --font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Type Scale */
+  --text-xs: 0.75rem;
+  /* 12px */
+  --text-sm: 0.85rem;
+  /* 13.6px */
+  --text-base: 1rem;
+  /* 16px */
+  --text-lg: 1.1rem;
+  /* 17.6px */
+  --text-xl: 1.25rem;
+  /* 20px */
+  --text-2xl: 1.75rem;
+  /* 28px */
+  --text-3xl: 3.5rem;
+  /* 56px */
+  --text-4xl: 5rem;
+  /* 80px */
+
+  /* === BORDER RADIUS === */
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 50%;
+
+  /* === TRANSITIONS === */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.8s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-reveal: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -43,8 +112,8 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 4px;
+  background: var(--color-gray-dark);
+  border-radius: var(--radius-sm);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -64,8 +133,8 @@ body::before {
   height: 100%;
 
   /* Simple clean dot grid */
-  background-image: radial-gradient(#333 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-image: radial-gradient(var(--color-gray-dark) 1px, transparent 1px);
+  background-size: var(--space-xl) var(--space-xl);
 
   opacity: 0.15;
   z-index: -2;
@@ -78,7 +147,7 @@ body::before {
 
 #root {
   min-height: 100%;
-  padding: 4rem 2rem;
+  padding: var(--space-3xl) var(--space-xl);
   max-width: 1200px;
   margin: 0 auto;
   z-index: 10;
@@ -87,6 +156,6 @@ body::before {
 
 @media (max-width: 768px) {
   #root {
-    padding: 2rem 1rem;
+    padding: var(--space-xl) var(--space-md);
   }
 }

@@ -7,9 +7,9 @@
 /* Header Group: Icon + Title/Subtitle */
 .card-header-group {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-md);
     align-items: flex-start;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
     position: relative;
     cursor: pointer;
     /* Interaction hint */
@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
     color: var(--text-secondary);
-    transition: all 0.3s ease;
+    transition: all var(--transition-normal);
     margin-top: 4px;
     /* Optical alignment with text cap-height */
 }
@@ -28,34 +28,34 @@
 .card-text-content {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: var(--space-xs);
 }
 
 .card-title {
-    font-size: 1.75rem;
+    font-size: var(--text-2xl);
     font-weight: 600;
-    color: #fff;
+    color: var(--color-white);
     line-height: 1.2;
     margin: 0;
     letter-spacing: -0.02em;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    transition: color var(--transition-normal), text-shadow var(--transition-normal);
 }
 
 .card-subtitle {
-    font-family: monospace;
-    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
     color: var(--text-secondary);
     letter-spacing: 0.05em;
 }
 
 /* Hover States for Title */
 .card-header-group:hover .card-title {
-    color: #fff;
+    color: var(--color-white);
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .card-header-group:hover .card-icon-wrapper {
-    color: #fff;
+    color: var(--color-white);
     transform: scale(1.1);
 }
 
@@ -74,7 +74,7 @@
 .card-reveal-wrapper {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: grid-template-rows var(--transition-reveal);
 }
 
 .card-internal-layout {
@@ -93,7 +93,7 @@
 .card-links {
     opacity: 0;
     transform: translateY(-10px);
-    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all var(--transition-reveal);
     margin-bottom: 0;
     /* Handled by grid spacing */
 }
@@ -108,7 +108,7 @@
 }
 
 .card-links {
-    margin-top: 1.5rem;
+    margin-top: var(--space-lg);
     /* Add spacing back here */
 }
 
@@ -116,49 +116,49 @@
 .card-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
 }
 
 .tag {
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
     color: var(--text-secondary);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0.25rem 0.75rem;
-    border-radius: 0;
+    background: var(--bg-overlay);
+    border: 1px solid var(--border-subtle);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-none);
     /* Sharp corners */
-    font-family: monospace;
+    font-family: var(--font-mono);
     letter-spacing: 0.05em;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
 }
 
 .tag:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: var(--border-subtle);
+    border-color: var(--border-normal);
 }
 
 
 .mini-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-    color: #fff;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    color: var(--color-white);
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0.5rem 1rem;
-    border-radius: 0;
+    border: 1px solid var(--border-normal);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-none);
     /* Sharp corners to match portfolio design */
-    background: rgba(255, 255, 255, 0.03);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: var(--bg-overlay-medium);
+    transition: all var(--transition-smooth);
     font-weight: 500;
 }
 
 .mini-link:hover {
-    background: #fff;
-    color: #000;
-    border-color: #fff;
+    background: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-white);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
@@ -166,16 +166,16 @@
 /* MOBILE TYPOGRAPHY TWEAKS */
 @media (max-width: 768px) {
     .card-title {
-        font-size: 1.25rem;
+        font-size: var(--text-xl);
         /* Significanly smaller */
     }
 
     .card-subtitle {
-        font-size: 0.75rem;
+        font-size: var(--text-xs);
     }
 
     .card-description {
-        font-size: 0.85rem;
+        font-size: var(--text-sm);
         line-height: 1.5;
     }
 
@@ -185,7 +185,7 @@
        Let's keep hover/tap for minimal look, but ensure it works.
     */
     .card-header-group {
-        gap: 0.5rem;
+        gap: var(--space-sm);
     }
 }
 
@@ -198,8 +198,8 @@
     /* Center horizontally */
     align-items: center;
     /* Center vertically */
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
     min-height: 80px;
     /* Ensure space */
 }
@@ -214,15 +214,14 @@
     background: transparent;
     border: none;
     color: var(--text-secondary);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all var(--transition-smooth);
     cursor: pointer;
-    opacity: 0.7;
+    opacity: var(--opacity-high);
 }
 
 .social-link:hover {
-    background: #fff;
-    color: #000;
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-    border-color: #fff;
+    color: var(--color-white);
+    background: transparent;
+    transform: translateY(-2px);
+    opacity: 1;
 }

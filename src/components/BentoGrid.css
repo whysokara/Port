@@ -5,7 +5,7 @@
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding-bottom: 8rem;
+    padding-bottom: var(--space-4xl);
 }
 
 /* === TIMELINE TRACK === */
@@ -50,7 +50,7 @@
     width: 6px;
     height: 20px;
     background: #fff;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     box-shadow:
         0 0 10px #fff,
         0 0 20px rgba(255, 255, 255, 0.8);
@@ -64,21 +64,21 @@
     transform: translateX(-50%);
     width: 12px;
     height: 12px;
-    border-radius: 50%;
-    border: 1px solid #333;
-    background: #000;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-gray-dark);
+    background: var(--color-black);
     transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: 0 0 0 4px var(--bg-color);
     z-index: 10;
 }
 
 .timeline-end-cap.active {
-    background: #fff;
+    background: var(--color-white);
     box-shadow:
         0 0 0 4px var(--bg-color),
         0 0 20px #fff,
         0 0 40px rgba(255, 255, 255, 0.8);
-    border-color: #fff;
+    border-color: var(--color-white);
     transform: translateX(-50%) scale(1.5);
 }
 
@@ -88,7 +88,7 @@
     justify-content: center;
     align-items: flex-start;
     position: relative;
-    margin-bottom: 6rem;
+    margin-bottom: var(--space-4xl);
     width: 100%;
 }
 
@@ -105,11 +105,11 @@
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
-    background: #000;
-    border: 1px solid #333;
-    border-radius: 50%;
+    background: var(--color-black);
+    border: 1px solid var(--color-gray-dark);
+    border-radius: var(--radius-full);
     z-index: 10;
-    transition: all 0.3s ease;
+    transition: all var(--transition-normal);
 }
 
 /* Socials / Footer */
@@ -117,7 +117,7 @@
     margin-bottom: 0;
     justify-content: center;
     position: relative;
-    padding-top: 4rem;
+    padding-top: var(--space-3xl);
 }
 
 .timeline-item.socials .timeline-content {
@@ -126,7 +126,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-md);
 }
 
 .timeline-item.socials .timeline-marker {
@@ -135,13 +135,13 @@
 
 /* "System Online" Status Text */
 .system-status {
-    font-family: monospace;
-    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
     letter-spacing: 0.3em;
     color: var(--accent);
     opacity: 0;
     transform: translateY(10px);
-    transition: all 0.8s ease;
+    transition: all var(--transition-slow);
 }
 
 .system-status.visible {
@@ -154,7 +154,7 @@
 .timeline-item:nth-child(odd) .timeline-content {
     margin-right: auto;
     text-align: right;
-    padding-right: 3rem;
+    padding-right: var(--space-2xl);
 }
 
 .timeline-item:nth-child(odd) .card-header-group {
@@ -185,7 +185,7 @@
 .timeline-item:nth-child(even) .timeline-content {
     margin-left: auto;
     text-align: left;
-    padding-left: 3rem;
+    padding-left: var(--space-2xl);
 }
 
 /* Mobile Responsiveness - KEEPING THE CENTER LAYOUT */
@@ -199,7 +199,7 @@
 
     /* Odd Items (Left) */
     .timeline-item:nth-child(odd) .timeline-content {
-        padding-right: 1rem;
+        padding-right: var(--space-md);
         /* Reduced from 1.5rem */
     }
 
@@ -211,7 +211,7 @@
 
     /* Even Items (Right) */
     .timeline-item:nth-child(even) .timeline-content {
-        padding-left: 1rem;
+        padding-left: var(--space-md);
         /* Reduced from 1.5rem */
     }
 
@@ -228,7 +228,7 @@
     }
 
     .timeline-item {
-        margin-bottom: 4rem;
+        margin-bottom: var(--space-3xl);
         /* Tighter vertical spacing */
         flex-direction: row;
         /* FORCE row again */
@@ -252,21 +252,21 @@
 /* GITHUB GRAPH */
 .github-graph-container {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-xl);
     opacity: 0.9;
-    transition: all 0.3s ease;
+    transition: all var(--transition-normal);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--space-sm);
 
     /* MODERN STYLING & MASKING */
     background: var(--bg-color);
     /* Masks the timeline behind it */
     z-index: 5;
     position: relative;
-    padding: 1.5rem;
-    border-radius: 16px;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
     /* border: 1px solid #1a1a1a; REMOVED per user request */
     box-shadow: 0 0 30px rgba(0, 255, 0, 0.05);
     /* Subtle green glow */
@@ -276,7 +276,7 @@
     opacity: 1;
     box-shadow: 0 0 40px rgba(0, 255, 0, 0.1);
     transform: translateY(-2px);
-    border-color: #333;
+    border-color: var(--color-gray-dark);
 }
 
 .github-graph {
@@ -288,24 +288,24 @@
     /* invert(1) turns Light Grey background to Dark Grey, and Dark Text to Light */
     /* brightness(1.2) pops the active squares */
     filter: grayscale(1) invert(1) brightness(1.2);
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     /* Smooth corners on the image itself */
 }
 
 .graph-label {
-    font-family: monospace;
-    font-size: 0.7rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
     color: var(--text-secondary);
     letter-spacing: 0.2em;
-    margin-top: 0.5rem;
+    margin-top: var(--space-sm);
 }
 
 @media (max-width: 768px) {
     .github-graph-container {
         overflow-x: auto;
         /* Allow horizontal scroll if needed */
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
+        margin-bottom: var(--space-md);
+        padding-bottom: var(--space-md);
         /* For scrollbar */
     }
 
