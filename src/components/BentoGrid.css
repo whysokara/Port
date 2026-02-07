@@ -162,7 +162,8 @@
 }
 
 .timeline-item:nth-child(odd) .card-description,
-.timeline-item:nth-child(odd) .card-links {
+.timeline-item:nth-child(odd) .card-links,
+.timeline-item:nth-child(odd) .card-tags {
     padding-left: 0;
     padding-right: 3.5rem;
     /* Matches card-header-group padding roughly */
@@ -173,6 +174,10 @@
 }
 
 .timeline-item:nth-child(odd) .card-links {
+    justify-content: flex-end;
+}
+
+.timeline-item:nth-child(odd) .card-tags {
     justify-content: flex-end;
 }
 

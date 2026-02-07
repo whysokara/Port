@@ -5,7 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 import './BentoCard.css';
 
 const BentoCard = ({ item }) => {
-    const { type, title, subtitle, description, icon: Icon, links } = item;
+    const { type, title, subtitle, description, icon: Icon, links, tags } = item;
 
     if (type === 'social-strip') {
         return (
@@ -31,6 +31,14 @@ const BentoCard = ({ item }) => {
             <div className="card-reveal-wrapper">
                 <div className="card-internal-layout">
                     <p className="card-description">{description}</p>
+
+                    {tags && tags.length > 0 && (
+                        <div className="card-tags">
+                            {tags.map((tag, idx) => (
+                                <span key={idx} className="tag">{tag}</span>
+                            ))}
+                        </div>
+                    )}
 
                     {links && links.length > 0 && (
                         <div className="card-links">

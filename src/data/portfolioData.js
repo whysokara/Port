@@ -1,15 +1,6 @@
 
 import {
-    Code2,
-    Palette,
     Terminal,
-    Database,
-    Cpu,
-    Layout,
-    Smartphone,
-    TrendingUp,
-    Github,
-    Linkedin,
     Mail
 } from 'lucide-react';
 import React from 'react';
@@ -30,17 +21,9 @@ const SimpleIcon = ({ slug, size = 24 }) =>
 
 /* 
    ICON MAPPING
-   Maps string names (from Google Sheet) to React Components.
+   Maps string names to React Components for social icons.
 */
 export const iconMap = {
-    'Code2': Code2,
-    'Palette': Palette,
-    'Terminal': Terminal,
-    'Database': Database,
-    'Cpu': Cpu,
-    'Layout': Layout,
-    'Smartphone': Smartphone,
-    'TrendingUp': TrendingUp,
     'Github': ({ size }) => React.createElement(SimpleIcon, { slug: 'github', size }),
     'Linkedin': ({ size }) => React.createElement(SimpleIcon, { slug: 'linkedin', size }),
     'Twitter': ({ size }) => React.createElement(SimpleIcon, { slug: 'x', size }), // X Logo
@@ -60,8 +43,8 @@ export const portfolioData = [
         title: "Data Engineer",
         subtitle: "Assistant Manager, KPMG",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
-        icon: Cpu,
-        links: [{ label: "", url: "#" }]
+        // links: [{ label: "", url: "#" }],
+        tags: ["SQL", "PySpark", "Databricks", "AWS", "QlikSense"]
     },
     {
         id: 'To-Do',
@@ -70,8 +53,8 @@ export const portfolioData = [
         title: "Your Digital Napkeen",
         subtitle: "Vibe Code - Lovable",
         description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-        icon: Database,
-        links: [{ label: "SingleTxt", url: "http://singletxt.lovable.app" }]
+        links: [{ label: "SingleTxt", url: "http://singletxt.lovable.app" }],
+        tags: ["Lovable", "Antigravity"]
     },
     {
         id: 'Leftover',
@@ -80,8 +63,8 @@ export const portfolioData = [
         title: "Leftover",
         subtitle: "Swipe. Keep. Delete",
         description: "Swipe-driven photo cleanup app for fast, intuitive gallery decluttering.",
-        icon: Smartphone,
-        links: ["X-code", "Claude"]
+        links: [],
+        tags: ["Xcode", "Antigravity", "React"]
     },
     {
         id: 'nocode',
@@ -90,30 +73,27 @@ export const portfolioData = [
         title: "Labore Et Dolore",
         subtitle: "Magna Aliqua",
         description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-        icon: Layout,
         links: []
     },
     {
-        id: 'dev',
-        type: 'large',
-        year: '2021',
-        title: "Ullamco Laboris",
-        subtitle: "Nisi Ut Aliquip",
+        id: 'Capgemini',
+        type: 'small',
+        year: '2022',
+        title: "Senior Analyst",
+        subtitle: "Capgemini 2019-2022",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-        icon: Code2,
         links: [
-            { label: "GitHub", url: "https://github.com" }
+            { label: "Experience Letter", url: "https://drive.google.com/file/d/1dOusQrAbmNE1CW1cd0tqiJxxGqaO7iCq/view?usp=sharing" }
         ]
     },
     {
-        id: 'marketing',
+        id: 'digital marketing',
         type: 'small',
         year: '2020',
-        title: "Totam Rem Aperiam",
-        subtitle: "Eaque Ipsa",
+        title: "Digital Marketing",
+        subtitle: "Intern, PixelTrack Digital",
         description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-        icon: TrendingUp,
-        links: []
+        links: [{ label: "Certificate", url: "https://drive.google.com/file/d/1HM3mhewkepNuGzXoXbw2-HApDK2gXRMZ/view?usp=sharing" }]
     },
     {
         id: 'WhatsApp',
@@ -122,7 +102,6 @@ export const portfolioData = [
         title: "WhatsApp API",
         subtitle: "No more saving temporary WhatsApp contacts",
         description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-        icon: Palette,
         links: [
             { label: "WhatsApp Plugin", url: "https://whytoadd.netlify.app" }
         ]
