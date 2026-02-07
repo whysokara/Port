@@ -43,12 +43,19 @@ const Header = () => {
                 <div className="hero-tech-stack">
                     <span className="tech-label">STACK_</span>
                     <div className="tech-icons">
-                        <img src="https://cdn.simpleicons.org/react/ffffff" alt="React" title="React" />
-                        <img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript" title="JavaScript" />
                         <img src="https://cdn.simpleicons.org/python/ffffff" alt="Python" title="Python" />
-                        <img src="https://cdn.simpleicons.org/solidity/ffffff" alt="Solidity" title="Solidity" />
+                        <img src="https://cdn.simpleicons.org/apachespark/ffffff" alt="PySpark" title="PySpark" />
+                        <img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="SQL" title="SQL" />
                         <img src="https://cdn.simpleicons.org/figma/ffffff" alt="Figma" title="Figma" />
+                        <img src="https://cdn.simpleicons.org/databricks/ffffff" alt="Databricks" title="Databricks" />
+                        <img src="https://cdn.simpleicons.org/mixpanel/ffffff" alt="Mixpanel" title="Mixpanel" />
+                        <img src="https://cdn.simpleicons.org/bitcoin/ffffff" alt="Blockchain" title="Blockchain" />
+                        <img src="https://cdn.simpleicons.org/langchain/ffffff" alt="Langchain" title="Langchain" />
+                        <img src="https://cdn.simpleicons.org/apacheairflow/ffffff" alt="Airflow" title="Airflow" />
+                        {/* <img src="https://cdn.simpleicons.org/amazonaws/ffffff" alt="AWS" title="AWS" /> */}
+                        <img src="https://cdn.simpleicons.org/solidity/ffffff" alt="Solidity" title="Solidity" />
                         <img src="https://cdn.simpleicons.org/git/ffffff" alt="Git" title="Git" />
+                        <img src="https://cdn.simpleicons.org/postman/ffffff" alt="Postman" title="Postman" />
                     </div>
                 </div>
             </motion.div>

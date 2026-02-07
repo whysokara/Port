@@ -55,7 +55,8 @@ export const portfolioData = [
         subtitle: "Vibe Code - Lovable",
         description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
         links: [{ label: "SingleTxt", url: "http://singletxt.lovable.app" }],
-        tags: ["Lovable", "Antigravity"]
+        tags: ["Lovable", "Antigravity", "React"],
+        previewUrl: "http://singletxt.lovable.app"
     },
     {
         id: 'Leftover',
@@ -64,18 +65,19 @@ export const portfolioData = [
         title: "Leftover",
         subtitle: "Swipe. Keep. Delete",
         description: "Swipe-driven photo cleanup app for fast, intuitive gallery decluttering.",
-        links: [],
-        tags: ["Xcode", "Antigravity", "React"]
+        links: [{ label: "Demo Video", url: "https://drive.google.com/file/d/1zqARBTmfQ0m4DVdup50HXCc7UKVRXnEf/view?usp=sharing" }],
+        tags: ["Xcode", "Antigravity", "React"],
+        // previewUrl: "https://drive.google.com/file/d/1zqARBTmfQ0m4DVdup50HXCc7UKVRXnEf/view?usp=sharing"
     },
-    {
-        id: 'nocode',
-        type: 'small',
-        year: '2022',
-        title: "Labore Et Dolore",
-        subtitle: "Magna Aliqua",
-        description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-        links: []
-    },
+    // {
+    //     id: 'nocode',
+    //     type: 'small',
+    //     year: '2022',
+    //     title: "Labore Et Dolore",
+    //     subtitle: "Magna Aliqua",
+    //     description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+    //     links: []
+    // },
     {
         id: 'Capgemini',
         type: 'small',
@@ -85,7 +87,9 @@ export const portfolioData = [
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
         links: [
             { label: "Experience Letter", url: "https://drive.google.com/file/d/1dOusQrAbmNE1CW1cd0tqiJxxGqaO7iCq/view?usp=sharing" }
-        ]
+        ],
+        previewUrl: "https://drive.google.com/file/d/1dOusQrAbmNE1CW1cd0tqiJxxGqaO7iCq/view?usp=sharing",
+        tags: ["SQL", "QlikSense", "Power BI", "Python"]
     },
     {
         id: 'digital marketing',
@@ -93,19 +97,38 @@ export const portfolioData = [
         year: '2020',
         title: "Digital Marketing",
         subtitle: "Intern, PixelTrack Digital",
-        description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-        links: [{ label: "Certificate", url: "https://drive.google.com/file/d/1HM3mhewkepNuGzXoXbw2-HApDK2gXRMZ/view?usp=sharing" }]
+        description: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+        links: [
+            { label: "Certificate", url: "https://drive.google.com/file/d/1HM3mhewkepNuGzXoXbw2-HApDK2gXRMZ/view?usp=sharing" }
+        ],
+        previewUrl: "https://drive.google.com/file/d/1HM3mhewkepNuGzXoXbw2-HApDK2gXRMZ/view?usp=sharing",
+        tags: ["Website Hosting", "Payment Integration", "Facebook Ads"]
     },
     {
         id: 'WhatsApp',
         type: 'small',
         year: '2019',
-        title: "WhatsApp API",
+        title: "WhatsApp",
         subtitle: "No more saving temporary WhatsApp contacts",
         description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
         links: [
             { label: "WhatsApp Plugin", url: "https://whytoadd.netlify.app" }
-        ]
+        ],
+        previewUrl: "https://whytoadd.netlify.app",
+        tags: ["React", "WhatsApp API"]
+    },
+    {
+        id: 'DRDO',
+        type: 'small',
+        year: '2018',
+        title: "Project Intern",
+        subtitle: "Center for Artificial Intelligence and Robotics, DRDO",
+        description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        tags: ["Arduino", "Manipulator Arm", "Robotics"]
+        // links: [
+        //     { label: "WhatsApp Plugin", url: "https://whytoadd.netlify.app" }
+        // ],
+        // previewUrl: "https://whytoadd.netlify.app"
     },
     {
         id: 'socials',

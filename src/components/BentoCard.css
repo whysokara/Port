@@ -15,6 +15,35 @@
     /* Interaction hint */
 }
 
+/* Preview Tooltip */
+.preview-tooltip {
+    position: absolute;
+    top: -230px;
+    left: 0;
+    width: 320px;
+    height: 200px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-normal);
+    z-index: 1000;
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    background: var(--bg-color);
+}
+
+.preview-tooltip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.card-header-group:hover .preview-tooltip {
+    opacity: 1;
+}
+
 .card-icon-wrapper {
     display: flex;
     align-items: center;
@@ -145,22 +174,21 @@
     gap: var(--space-sm);
     font-size: var(--text-sm);
     color: var(--color-white);
-    text-decoration: none;
-    border: 1px solid var(--border-normal);
-    padding: var(--space-sm) var(--space-md);
-    border-radius: var(--radius-none);
-    /* Sharp corners to match portfolio design */
-    background: var(--bg-overlay-medium);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    padding: var(--space-xs) 0;
+    background: transparent;
+    border: none;
     transition: all var(--transition-smooth);
     font-weight: 500;
 }
 
 .mini-link:hover {
-    background: var(--color-white);
-    color: var(--color-black);
-    border-color: var(--color-white);
+    color: var(--color-white);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    text-decoration-thickness: 2px;
+    opacity: 1;
 }
 
 /* MOBILE TYPOGRAPHY TWEAKS */

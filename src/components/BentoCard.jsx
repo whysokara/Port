@@ -5,7 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 import './BentoCard.css';
 
 const BentoCard = ({ item }) => {
-    const { type, title, subtitle, description, icon: Icon, links, tags } = item;
+    const { type, title, subtitle, description, icon: Icon, links, tags, previewUrl } = item;
 
     if (type === 'social-strip') {
         return (
@@ -22,6 +22,15 @@ const BentoCard = ({ item }) => {
     return (
         <div className={`bento-card ${type}`}>
             <div className="card-header-group">
+                {previewUrl && (
+                    <div className="preview-tooltip">
+                        <img
+                            src={`https://api.microlink.io/?url=${encodeURIComponent(previewUrl)}&screenshot=true&meta=false&embed=screenshot.url`}
+                            alt="Website Preview"
+                            loading="lazy"
+                        />
+                    </div>
+                )}
                 <div className="card-text-group">
                     <h3 className="card-title">{title}</h3>
                     <h4 className="card-subtitle">{subtitle}</h4>
