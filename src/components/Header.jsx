@@ -14,7 +14,7 @@ const Header = () => {
                 className="hero-content"
             >
                 <h1 className="hero-name">kara</h1>
-                <h2 className="hero-title">Lorem Ipsum <span className="highlight">// Dolor Sit</span></h2>
+                <h2 className="hero-title">Product <span className="highlight">// ..</span></h2>
 
                 <div className="hero-bio-container">
                     <p className="hero-paragraph">
